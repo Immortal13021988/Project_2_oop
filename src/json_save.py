@@ -1,8 +1,8 @@
 import json
 from abc import ABC, abstractmethod
 
-from src.vacancy import Vacancy
 from src.hh_api import HHApi
+from src.vacancy import Vacancy
 
 
 class AbstractJson(ABC):

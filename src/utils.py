@@ -8,10 +8,14 @@ def vacancies_by_name(vacancies: list):
             print("Вакансии не найдены.")
         else:
             for vac in vacancies:
-                vacancy_obj = Vacancy(name=vac.get('name', 'Нет названия'),
-                                      link=vac.get('alternate_url', 'Нет ссылки'),
-                                      salary=vac.get("salary"),
-                                      description=vac.get("snippet", {}).get("requirement", "Нет описания"))
+                vacancy_obj = Vacancy(
+                    name=vac.get("name", "Нет названия"),
+                    link=vac.get("alternate_url", "Нет ссылки"),
+                    salary=vac.get("salary"),
+                    description=vac.get("snippet", {}).get(
+                        "requirement", "Нет описания"
+                    ),
+                )
                 print(vacancy_obj)
 
     except Exception as e:

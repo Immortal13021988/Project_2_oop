@@ -1,5 +1,6 @@
 class Vacancy:
     """Класс для работы с вакансиями, валидация и сравнения"""
+
     __slots__ = ("name", "link", "description", "salary_from", "salary_to")
 
     def __init__(self, name, link, salary, description):
@@ -21,7 +22,11 @@ class Vacancy:
 
     def __eq__(self, other):  # метод меньше
         """Метод сравнения (<)"""
-        return self.name == other.name and self.link == other.link and self.description == other.description
+        return (
+            self.name == other.name
+            and self.link == other.link
+            and self.description == other.description
+        )
 
     def __lt__(self, other):  # метод меньше
         """Метод сравнения (<)"""
